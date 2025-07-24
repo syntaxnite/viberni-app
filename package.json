@@ -1,13 +1,15 @@
 {
-  "name": "viberni-website",
+  "name": "viberni-app",
   "version": "1.0.0",
-  "description": "Landing page for Viberni - A social media platform that adapts to how you feel",
+  "description": "Viberni - A social media platform that adapts to how you feel",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "echo 'No build step required'",
+    "vercel-build": "echo 'Build complete'"
   },
-  "keywords": ["viberni", "social media", "emotional", "landing page"],
+  "keywords": ["social media", "emotional intelligence", "mental health", "viberni"],
   "author": "Viberni Team",
   "license": "MIT",
   "dependencies": {
@@ -17,5 +19,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
