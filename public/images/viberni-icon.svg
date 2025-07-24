@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="viberni-icon">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Simplified crescent shape for icon -->
+  <path d="M 8 8 Q 20 2 28 20 Q 20 38 8 32 Q 14 20 8 8 Z" 
+        fill="url(#iconGradient)" 
+        opacity="0.9"/>
+</svg>

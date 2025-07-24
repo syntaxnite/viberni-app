@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" class="viberni-logo">
+  <defs>
+    <!-- Simplified gradient inspired by the reference image -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Simple, elegant crescent shape representing emotional adaptation -->
+  <path d="M 15 15 Q 35 5 45 30 Q 35 55 15 45 Q 25 30 15 15 Z" 
+        fill="url(#logoGradient)" 
+        filter="url(#glow)"
+        opacity="0.9">
+    <animateTransform 
+      attributeName="transform" 
+      type="rotate" 
+      values="0 30 30;5 30 30;0 30 30;-5 30 30;0 30 30" 
+      dur="8s" 
+      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Viberni Text -->
+  <text x="60" y="38" 
+        font-family="Inter, sans-serif" 
+        font-size="24" 
+        font-weight="700" 
+        fill="currentColor" 
+        class="logo-text">
+    Viberni
+  </text>
+  
+  <!-- Tagline -->
+  <text x="60" y="48" 
+        font-family="Inter, sans-serif" 
+        font-size="9" 
+        font-weight="400" 
+        fill="currentColor" 
+        opacity="0.7" 
+        class="logo-tagline">
+    adapts to how you feel
+  </text>
+</svg>

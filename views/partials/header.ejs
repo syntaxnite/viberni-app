@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="/" class="brand-link">
+                        <img src="/images/viberni-logo.svg" alt="Viberni Logo" class="brand-logo">
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/support" class="nav-link <%= currentPage === 'support' ? 'active' : '' %>">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/questionnaire" class="nav-link <%= currentPage === 'questionnaire' ? 'active' : '' %> cta-button">Share Your Experience</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Dark/Light Mode Toggle -->
+                    <div class="theme-toggle">
+                        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <span class="sun-icon">☀️</span>
+                            <span class="moon-icon">🌙</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="mobile-menu-toggle">
+                    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main-content">

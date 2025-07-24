@@ -1,0 +1,175 @@
+<%- include('../partials/header') %>
+
+<section class="questionnaire-hero">
+    <div class="questionnaire-container">
+        <div class="questionnaire-header">
+            <div class="questionnaire-logo">
+                <img src="/images/viberni-icon.svg" alt="Viberni Logo" class="questionnaire-logo-img">
+            </div>
+            <h1>Tell Us About Your Social Media Experience</h1>
+            <p>Your insights will help us build a platform that truly understands and adapts to human emotions.</p>
+        </div>
+    </div>
+</section>
+
+<section class="questionnaire-form">
+    <div class="form-container">
+        <form id="emotional-questionnaire" action="/questionnaire/submit" method="POST">
+            <div class="form-section">
+                <h3>How does social media currently make you feel?</h3>
+                <div class="question-group">
+                    <label class="question-label">When you open a social media app, what emotion do you most commonly experience?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="opening_emotion" value="excited" required>
+                            <span class="radio-custom"></span>
+                            Excited and energized
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="opening_emotion" value="anxious" required>
+                            <span class="radio-custom"></span>
+                            Anxious or overwhelmed
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="opening_emotion" value="neutral" required>
+                            <span class="radio-custom"></span>
+                            Neutral or indifferent
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="opening_emotion" value="curious" required>
+                            <span class="radio-custom"></span>
+                            Curious about others
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="opening_emotion" value="lonely" required>
+                            <span class="radio-custom"></span>
+                            Lonely or disconnected
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label">How often do you feel misunderstood on social media?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="misunderstood_frequency" value="never" required>
+                            <span class="radio-custom"></span>
+                            Never
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="misunderstood_frequency" value="rarely" required>
+                            <span class="radio-custom"></span>
+                            Rarely
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="misunderstood_frequency" value="sometimes" required>
+                            <span class="radio-custom"></span>
+                            Sometimes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="misunderstood_frequency" value="often" required>
+                            <span class="radio-custom"></span>
+                            Often
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="misunderstood_frequency" value="always" required>
+                            <span class="radio-custom"></span>
+                            Almost always
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>What would you want from an emotion-aware social platform?</h3>
+                
+                <div class="question-group">
+                    <label class="question-label">Which features would be most valuable to you? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="desired_features" value="mood_matching">
+                            <span class="checkbox-custom"></span>
+                            Content that matches my current mood
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="desired_features" value="emotional_support">
+                            <span class="checkbox-custom"></span>
+                            Connections with others feeling similar emotions
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="desired_features" value="mood_tracking">
+                            <span class="checkbox-custom"></span>
+                            Tools to track and understand my emotional patterns
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="desired_features" value="gentle_algorithms">
+                            <span class="checkbox-custom"></span>
+                            Algorithms that prioritize my well-being over engagement
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="desired_features" value="safe_spaces">
+                            <span class="checkbox-custom"></span>
+                            Safe spaces for vulnerable sharing
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label" for="current_frustrations">What frustrates you most about current social media platforms?</label>
+                    <textarea 
+                        id="current_frustrations" 
+                        name="current_frustrations" 
+                        rows="4" 
+                        placeholder="Share what makes social media feel disconnected or harmful to your emotional well-being..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label" for="ideal_experience">Describe your ideal emotional social media experience:</label>
+                    <textarea 
+                        id="ideal_experience" 
+                        name="ideal_experience" 
+                        rows="4" 
+                        placeholder="How would you want to feel when using social media? What would make it meaningful for you?"
+                        required
+                    ></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>About You (Optional)</h3>
+                
+                <div class="question-group">
+                    <label class="question-label" for="age_range">Age Range</label>
+                    <select id="age_range" name="age_range">
+                        <option value="">Prefer not to say</option>
+                        <option value="13-17">13-17</option>
+                        <option value="18-24">18-24</option>
+                        <option value="25-34">25-34</option>
+                        <option value="35-44">35-44</option>
+                        <option value="45-54">45-54</option>
+                        <option value="55+">55+</option>
+                    </select>
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label" for="email">Email (to stay updated on Viberni's development)</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="your.email@example.com"
+                    >
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-large">Share My Experience</button>
+                <p class="form-note">Your responses help us build a more emotionally intelligent social platform. Thank you for sharing! 💙</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

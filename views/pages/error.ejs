@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<section class="error-hero">
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-icon">⚠️</div>
+            <h1>Something Went Wrong</h1>
+            <p>We're experiencing some technical difficulties. Our team has been notified and we're working to fix this.</p>
+            
+            <div class="error-details">
+                <% if (typeof error !== 'undefined') { %>
+                    <details>
+                        <summary>Technical Details</summary>
+                        <pre><%= error %></pre>
+                    </details>
+                <% } %>
+            </div>
+            
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary">Return Home</a>
+                <button onclick="window.location.reload()" class="btn btn-secondary">Try Again</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="error-support">
+    <div class="support-container">
+        <h2>Need Help?</h2>
+        <p>If this problem persists, please contact our support team.</p>
+        <a href="mailto:support@viberni.com" class="btn btn-primary">Contact Support</a>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>
