@@ -1,44 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "app.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "routes": [
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/css/(.*)",
-      "dest": "/public/css/$1"
-    },
-    {
-      "src": "/js/(.*)",
-      "dest": "/public/js/$1"
-    },
-    {
-      "src": "/images/(.*)",
-      "dest": "/public/images/$1"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/public/images/favicon.svg"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/app.js"
-    }
-  ],
   "builds": [
     {
       "src": "app.js",
       "use": "@vercel/node"
-    },
+    }
+  ],
+  "routes": [
     {
-      "src": "public/**/*",
-      "use": "@vercel/static"
+      "src": "/(.*)",
+      "dest": "/app.js"
     }
   ]
 }
